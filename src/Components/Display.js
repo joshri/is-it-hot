@@ -1,13 +1,15 @@
 import React, { useState, useEffect } from 'react';
-import LyricForm from './LyricForm'
+import LyricForm from './LyricForm';
+import ReactPlayer from 'react-player';
 
 function Display(props) {
 	const weatherKey = process.env.REACT_APP_WEATHER_KEY;
 
 	let weatherUrl = `https://api.openweathermap.org/data/2.5/weather?zip=${props.zip}&units=imperial&appid=${weatherKey}`;
 
-	let date = new Date();
-	date.toUTCString();
+		let date = new Date();
+		date.toUTCString();
+		const pokeNum = Math.floor(Math.random() * 807) + 1;
 
 	let [weather, setWeather] = useState({
 		name: '',
@@ -17,10 +19,14 @@ function Display(props) {
 	let [hotOrNot, setHotOrNot] = useState('');
 	let [advice, setAdvice] = useState('');
 	let [retro, setRetro] = useState('');
-    let [dog, setDog] = useState('');
-    
+	let [dog, setDog] = useState('');
+	let [poke, setPoke] = useState({
+		name: '',
+		pic: '',
+	});
 
 	useEffect(() => {
+
 		fetch(weatherUrl)
 			.then((res) => res.json())
 			.then((json) => {
@@ -50,6 +56,11 @@ function Display(props) {
 			.then((json) => {
 				setDog(json.message);
 			});
+		fetch(`https://pokeapi.co/api/v2/pokemon/${pokeNum}`)
+			.then((res) => res.json())
+			.then((json) =>
+				setPoke({ name: json.species.name, pic: json.sprites.front_default })
+			);
 	}, []);
 
 	return (
@@ -77,9 +88,22 @@ function Display(props) {
 					<h2>Here is a dog:</h2>
 					<img className='dog' src={dog} />
 				</div>
-                <div>
-                    <LyricForm />
-                </div>
+				<div>
+					<h2>...how about a pokemon?</h2>
+					<img src={poke.pic} />
+					<h3>{poke.name.toUpperCase()} #{pokeNum}</h3>
+				</div>
+				<div>
+					<LyricForm />
+				</div>
+				<div>
+					<h2>
+						Sometimes, when I'm feeling low, I'll watch the music video for She
+						Wolf by Shakira. And no - you can't change the music video. It's
+						this one or nothing.
+					</h2>
+					<ReactPlayer url='https://www.youtube.com/watch?v=booKP974B0k' />
+				</div>
 			</main>
 		</div>
 	);

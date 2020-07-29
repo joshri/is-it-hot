@@ -16,8 +16,9 @@ https://docs.google.com/document/d/1LoUIACK0nUY89c-B0Xb0zcydbzadaKdmbZmB_m5C5cE/
 - openweathermap.org/api
 - mercuryretrogradeapi.com
 - api.adviceslip.com
-- reelgood.com
-- ....and more
+- dog.ceo/dog-api/
+- lyricsovh.docs.apiary.io/#reference
+- 
 
 ## Component Structure
 - App
