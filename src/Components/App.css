@@ -11,3 +11,8 @@
   justify-content: center;
   align-items: center;
 }
+
+.dog {
+  width: 30vw;
+  height: 30vh;
+}
