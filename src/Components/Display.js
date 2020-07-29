@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 
 const weatherKey = process.env.REACT_APP_WEATHER_KEY;
+let date = new Date();
+date.toUTCString();
 
 class Display extends Component {
 	constructor(props) {
@@ -11,7 +13,8 @@ class Display extends Component {
 				feels_like: '',
 			},
 			hotOrNot: null,
-			advice: '',
+            advice: '',
+            retro: null,
 		};
 	}
 
@@ -26,7 +29,14 @@ class Display extends Component {
 
 	setAdvice = (advice) => {
 		this.setState({ advice: advice });
-	};
+    };
+    
+    setRetro = (json) => {
+        if (json.is_retrograde) {
+        this.setState({ retro: 'Good news! Mercury is in retrograde'})
+        } 
+        this.setState( {retro: 'Unfortunately, Mercury is not in retrograde...'} )
+    }
 
 	hotOrNot = (weather) => {
 		if (weather.feels_like < 65) {
@@ -50,6 +60,11 @@ class Display extends Component {
 			.then((json) => {
                 this.setAdvice(json.slip.advice)
             });
+        fetch(`https://mercuryretrogradeapi.com?date=${date}`)
+        .then(res => res.json())
+        .then(json => {
+            this.setRetro(json)
+        })
 	}
 
 	render() {
@@ -65,6 +80,10 @@ class Display extends Component {
 				<div className='advice'>
                     <h2>You know what they say...</h2>
                     <h3>"{this.state.advice}"</h3>
+                </div>
+                <div className='retro'>
+                    <h2>Need an excuse?</h2>
+                    <h3>{this.state.retro}</h3>
                 </div>
 			</main>
 		);
