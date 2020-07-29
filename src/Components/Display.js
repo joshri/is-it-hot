@@ -9,12 +9,13 @@ class Display extends Component {
 		super(props);
 		this.state = {
 			weather: {
-				name: '',
-				feels_like: '',
+				name: '?',
+                feels_like: '?',
+                skys: '?',
 			},
-			hotOrNot: null,
-            advice: '',
-            retro: null,
+			hotOrNot: '?',
+            advice: '?',
+            retro: '?',
 		};
 	}
 
@@ -22,7 +23,8 @@ class Display extends Component {
 		this.setState({
 			weather: {
 				name: json.name,
-				feels_like: json.main.feels_like,
+                feels_like: json.main.feels_like,
+                skys: json.weather[0].main,
 			},
 		});
 	};
@@ -50,6 +52,7 @@ class Display extends Component {
 		fetch(weatherUrl)
 			.then((res) => res.json())
 			.then((json) => {
+                console.log(json);
                  this.setWeather(json);
                  this.hotOrNot(json.main);
 			})
@@ -77,6 +80,9 @@ class Display extends Component {
 						Feels exactly like {this.state.weather.feels_like} degrees in good
 						ol' {this.state.weather.name}
 					</h2>
+                    <h3>Is it raining?</h3>
+                    <h2>WHO CARES?</h2>
+                    <h4>jk - SKYS: {this.state.weather.skys}</h4>
 				</div>
 				<div className='advice'>
                     <h2>You know what they say...</h2>
