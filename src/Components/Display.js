@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import LyricForm from './LyricForm'
 
 function Display(props) {
 	const weatherKey = process.env.REACT_APP_WEATHER_KEY;
@@ -16,7 +17,8 @@ function Display(props) {
 	let [hotOrNot, setHotOrNot] = useState('');
 	let [advice, setAdvice] = useState('');
 	let [retro, setRetro] = useState('');
-	let [dog, setDog] = useState('');
+    let [dog, setDog] = useState('');
+    
 
 	useEffect(() => {
 		fetch(weatherUrl)
@@ -75,6 +77,9 @@ function Display(props) {
 					<h2>Here is a dog:</h2>
 					<img className='dog' src={dog} />
 				</div>
+                <div>
+                    <LyricForm />
+                </div>
 			</main>
 		</div>
 	);

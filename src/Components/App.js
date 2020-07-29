@@ -54,27 +54,27 @@ class App extends React.Component {
 						if (this.state.showDisplay) {
 							return (
 								<Display
-                  showDisplay={this.state.showDisplay}
-                  showError={this.showError}
+									showDisplay={this.state.showDisplay}
+									showError={this.showError}
 									zip={this.state.zip}
 								/>
 							);
 						}
 					}}
 				/>
-        <Route
-          path='/'
-          render={() => {
-            if (this.state.showError) {
-              return (
-                <Error
-                  showError={this.state.showError}
-                  askAgain={this.askAgain}
-                  />
-              )
-            }
-          }}
-          />
+				<Route
+					path='/'
+					render={() => {
+						if (this.state.showError) {
+							return (
+								<Error
+									showError={this.state.showError}
+									askAgain={this.askAgain}
+								/>
+							);
+						}
+					}}
+				/>
 			</div>
 		);
 	}
