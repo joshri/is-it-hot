@@ -5,7 +5,7 @@ class Home extends Component {
    
     render() {
         return (
-					<div>
+					<div className='home'>
 						<h2>Type out your Zip Code to KNOW</h2>
 						<form onSubmit={this.props.handleSubmit}>
 							<label htmlFor='zip'>Zip Code: </label>
