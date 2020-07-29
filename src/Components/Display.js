@@ -40,9 +40,9 @@ class Display extends Component {
 
 	hotOrNot = (weather) => {
 		if (weather.feels_like < 65) {
-			return this.setState({ hotOrNot: 'NOT' });
+			return this.setState({ hotOrNot: 'IT\'S NOT' });
 		}
-		return this.setState({ hotOrNot: 'HOT' });
+		return this.setState({ hotOrNot: 'IT\'S HOT' });
 	};
 
 	componentDidMount() {
@@ -50,10 +50,11 @@ class Display extends Component {
 		fetch(weatherUrl)
 			.then((res) => res.json())
 			.then((json) => {
-                return this.setWeather(json), this.hotOrNot(json.main);
+                 this.setWeather(json);
+                 this.hotOrNot(json.main);
 			})
-			.catch((error) => {
-				console.log(error);
+			.catch(() => {
+				this.props.showError();
 			});
 		fetch('https://api.adviceslip.com/advice')
 			.then((res) => res.json())

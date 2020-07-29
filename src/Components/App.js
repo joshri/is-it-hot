@@ -4,12 +4,14 @@ import { Route } from 'react-router-dom';
 import Header from './Header';
 import Home from './Home';
 import Display from './Display';
+import Error from './Error';
 
 class App extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			showDisplay: false,
+      showDisplay: false,
+      showError: false,
 			zip: '',
 		};
 	}
@@ -24,9 +26,9 @@ class App extends React.Component {
 		this.setState({ showDisplay: true });
 	};
 
-	askAgain = () => {
-		this.setState({ showDisplay: false });
-	};
+	askAgain = () => this.setState({ showDisplay: false, showError: false });
+  
+  showError = () => this.setState({showError: true, showDisplay: false});
 
 	render() {
 		return (
@@ -36,7 +38,7 @@ class App extends React.Component {
 					exact
 					path='/'
 					render={() => {
-						if (!this.state.showDisplay) {
+						if (!this.state.showDisplay && !this.state.showError) {
 							return (
 								<Home
 									handleChange={this.handleChange}
@@ -52,13 +54,27 @@ class App extends React.Component {
 						if (this.state.showDisplay) {
 							return (
 								<Display
-									showDisplay={this.state.showDisplay}
+                  showDisplay={this.state.showDisplay}
+                  showError={this.showError}
 									zip={this.state.zip}
 								/>
 							);
 						}
 					}}
 				/>
+        <Route
+          path='/'
+          render={() => {
+            if (this.state.showError) {
+              return (
+                <Error
+                  showError={this.state.showError}
+                  askAgain={this.askAgain}
+                  />
+              )
+            }
+          }}
+          />
 			</div>
 		);
 	}
