@@ -8,6 +8,7 @@ class Header extends Component {
 				<h1 className='title'>
 					Is It Hot?<br></br>Your Instant Guide.
 				</h1>
+				<button id='about' className='askAgain' onClick={this.props.showModal}>ABOUT</button>
 				<button className='askAgain' onClick={this.props.askAgain}>
 					ASK AGAIN
 				</button>

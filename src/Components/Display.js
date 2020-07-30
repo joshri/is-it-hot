@@ -1,6 +1,13 @@
 import React, { useState, useEffect } from 'react';
+import Weather from './Weather';
+import Advice from './Advice';
+import Retrograde from './Retrograde';
+import Dog from './Dog';
+import Pokemon from './Pokemon';
 import LyricForm from './LyricForm';
-import ReactPlayer from 'react-player';
+import SheWolf from './SheWolf';
+
+
 import { motion } from 'framer-motion';
 
 function Display(props) {
@@ -68,48 +75,25 @@ function Display(props) {
 		<div>
 			<main>
 				<div className='weather'>
-					<motion.h1
-						className='hotOrNot'
-						animate={{ opacity: [0.1, 1] }}
-						transition={{ ease: 'easeIn', duration: 2 }}>
-						{hotOrNot}
-					</motion.h1>
-					<h3>It's {hotOrNot}.</h3>
-					<h2>
-						It feels like {weather.feels_like} degrees in {weather.name}
-					</h2>
-					<h3>Is it wet?</h3>
-					<h4>Sky Status: {weather.skies}</h4>
+					<Weather weather={weather} hotOrNot={hotOrNot} />
 				</div>
 				<div className='advice'>
-					<h2>Not feeling it? You know what they say...</h2>
-					<h3>"{advice}"</h3>
+					<Advice advice={advice} />
 				</div>
 				<div className='retro'>
-					<h2>Need an excuse?</h2>
-					<h3>{retro}</h3>
+					<Retrograde retro={retro} />
 				</div>
-				<div className='dogFull'>
-					<h2>Let this dog motivate you:</h2>
-					<img className='dog' src={dog} />
+				<div className='dog'>
+					<Dog dog={dog} />
 				</div>
 				<div className='poke'>
-					<h2>...how about a pokemon?</h2>
-					<img src={poke.pic} />
-					<h3>
-						{poke.name.toUpperCase()} #{pokeNum}
-					</h3>
+					<Pokemon poke={poke} pokeNum={pokeNum} />
 				</div>
-				<div>
+				<div className='lyricForm'>
 					<LyricForm />
 				</div>
 				<div className='sheWolf'>
-                    <h2>Wow. This is an emergency...</h2>
-					<h2>
-						...sometimes, when I'm feeling low, I'll watch the music video for She
-						Wolf by Shakira. This is literally the best I've got. Good Luck out there in the world today champ.
-					</h2>
-					<ReactPlayer url='https://www.youtube.com/watch?v=booKP974B0k' />
+                    <SheWolf />
 				</div>
 			</main>
 		</div>

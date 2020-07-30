@@ -13,7 +13,7 @@ button {
   font-family: 'Raleway Dots', cursive;
   font-size: 12px;
 	display: flex;
-	justify-content: space-between;
+	justify-content: flex-start;
 	align-items: center;
 	height: 10vh;
 	width: 100vw;
@@ -30,6 +30,22 @@ button {
 }
 .askAgain {
 	margin-right: 5vw;
+}
+
+.hide {
+  display: none;
+}
+
+.modal {
+  position: absolute;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: white;
+  border: 2px solid black;
+  border-radius: 10px;
+  height: 50vh;
+  width: 50vw;
 }
 
 main {
@@ -90,7 +106,7 @@ main {
 font-size: 35vw;
 }
 
-.dog {
+.dogImg {
 	width: 200px;
 	height: 200px;
 }

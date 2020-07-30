@@ -3,6 +3,7 @@ import './App.css';
 import {motion} from 'framer-motion'
 import { Route } from 'react-router-dom';
 import Header from './Header';
+import About from './About'
 import Home from './Home';
 import Display from './Display';
 import Error from './Error';
@@ -13,6 +14,7 @@ class App extends React.Component {
 		this.state = {
       showDisplay: false,
       showError: false,
+      display: 'none',
 			zip: '',
 		};
 	}
@@ -31,10 +33,19 @@ class App extends React.Component {
   
   showError = () => this.setState({showError: true, showDisplay: false});
 
+  showModal = (event) => {
+		if (event.target.id === 'about') {
+			this.setState({display: 'flex'});
+		} else {
+			this.setState({display: 'none'});
+    }
+  }
+
 	render() {
 		return (
 			<div className='App'>
-				<Header askAgain={this.askAgain} />
+				<Header askAgain={this.askAgain} display={this.state.display} showModal={this.showModal}/>
+        <About display={this.state.display} showModal={this.showModal} />
 				<Route
 					exact
 					path='/'

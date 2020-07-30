@@ -18,7 +18,7 @@ https://docs.google.com/document/d/1LoUIACK0nUY89c-B0Xb0zcydbzadaKdmbZmB_m5C5cE/
 - api.adviceslip.com
 - dog.ceo/dog-api/
 - lyricsovh.docs.apiary.io/#reference
-- https://pokeapi.co/
+- pokeapi.co/
 
 ## Component Structure
 - App

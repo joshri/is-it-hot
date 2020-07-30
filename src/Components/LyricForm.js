@@ -26,7 +26,7 @@ function LyricForm(props) {
 	});
 
 	return (
-		<div className='lyricForm'>
+		<div >
 			<h1>Okay. If you really need some motivation...</h1>
 			<h2>
 				Read the Pulitzer Prize winning lyrics of D4L's Laffy Taffy. Let them
