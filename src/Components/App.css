@@ -2,8 +2,16 @@ div {
   font-family: 'Montserrat', sans-serif;
 }
 
+button {
+  font-family: 'Montserrat', sans-serif;
+  background: transparent;
+  border-radius: 15px;
+  padding: 10px;
+}
+
 .header {
   font-family: 'Raleway Dots', cursive;
+  font-size: 12px;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -21,7 +29,7 @@ div {
 	margin-left: 20px;
 }
 .askAgain {
-	margin-right: 100px;
+	margin-right: 5vw;
 }
 
 main {
@@ -31,19 +39,58 @@ main {
 }
 
 .home,
-.weather {
+.weather,
+.zipForm, 
+.advice,
+.retro,
+.dogFull,
+.poke,
+.lyricForm,
+.sheWolf {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	align-items: center;
+  align-items: center;
+  text-align: center;
+}
+
+.zipForm {
+  height: 30vh;
+  justify-content: space-evenly;
+}
+
+#zip {
+  height: 40px;
+  font-size: 20px;
+  text-align: center;
+}
+
+.prompt {
+  font-family: 'Raleway Dots', cursive;
 }
 
 .home {
+  margin-top: 15vh;
   height: 50vh;
   font-family: 'Montserrat', sans-serif;
 }
 
+.error {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 15vh;
+  height: 50vh;
+  width: 100vw;
+  font-size: 150%;
+}
+
+.hotOrNot {
+font-size: 35vw;
+}
+
 .dog {
-	width: 30vw;
-	height: 30vh;
+	width: 200px;
+	height: 200px;
 }

@@ -26,8 +26,12 @@ function LyricForm(props) {
 	});
 
 	return (
-		<div>
-            <h2>Read the Pulitzer Prize winning lyrics of D4L's Laffy Taffy. Let them wash over you. Or look up the lyrics to a lesser piece.</h2>
+		<div className='lyricForm'>
+			<h1>Okay. If you really need some motivation...</h1>
+			<h2>
+				Read the Pulitzer Prize winning lyrics of D4L's Laffy Taffy. Let them
+				wash over you. Or look up the lyrics to a lesser piece.
+			</h2>
 
 			<form onSubmit={lyricSubmit}>
 				<label htmlFor='artist'>Artist: </label>
@@ -46,7 +50,7 @@ function LyricForm(props) {
 				/>
 				<button type='submit'>CHANGE IT</button>
 			</form>
-            <h3>LYRICS:</h3>
+			<h3>LYRICS:</h3>
 			<p className='lyrics'>{lyrics}</p>
 		</div>
 	);

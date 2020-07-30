@@ -6,8 +6,8 @@ class Home extends Component {
     render() {
         return (
 					<div className='home'>
-						<h2>Type out your Zip Code to KNOW</h2>
-						<form onSubmit={this.props.handleSubmit}>
+						<h2 className='prompt'>is it hot? or is it not?</h2>
+						<form className='zipForm' onSubmit={this.props.handleSubmit}>
 							<label htmlFor='zip'>Zip Code: </label>
 							<input
 								id='zip'
@@ -15,7 +15,7 @@ class Home extends Component {
 								placeholder='Zip Code Here!!'
 								onChange={this.props.handleChange}></input>
 							
-								<button type='submit'>HOT OR NOT</button>
+								<button className='submit' type='submit'>HOT OR NOT</button>
 							
 						</form>
 					</div>
