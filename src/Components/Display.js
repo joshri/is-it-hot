@@ -71,6 +71,9 @@ function Display(props) {
 			);
 	}, []);
 
+    while (!hotOrNot) {
+        return <h1>LOADING</h1>
+    }
 	return (
 		<div>
 			<main>
@@ -97,7 +100,8 @@ function Display(props) {
 				</div>
 			</main>
 		</div>
-	);
+    );
+    
 }
 
 export default Display;
