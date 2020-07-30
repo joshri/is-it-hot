@@ -1,18 +1,49 @@
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-right: 100px;
+div {
+  font-family: 'Montserrat', sans-serif;
 }
 
-.home, .weather{
+.header {
+  font-family: 'Raleway Dots', cursive;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 10vh;
+	width: 100vw;
+	border-bottom: 2px solid black;
+	color: black;
+	background-color: white;
+	position: fixed;
+	left: 0px;
+	top: 0px;
+}
+
+.title {
+	margin-left: 20px;
+}
+.askAgain {
+	margin-right: 100px;
+}
+
+main {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  margin-top: 10vh;
+}
+
+.home,
+.weather {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.home {
+  height: 50vh;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .dog {
-  width: 30vw;
-  height: 30vh;
+	width: 30vw;
+	height: 30vh;
 }

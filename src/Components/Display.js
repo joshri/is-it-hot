@@ -69,15 +69,15 @@ function Display(props) {
 				<div className='weather'>
 					<h1>{hotOrNot}</h1>
 					<h2>
-						Feels exactly like {weather.feels_like} degrees in good ol'
+						Feels exactly like {weather.feels_like} degrees in good ol'{' '}
 						{weather.name}
 					</h2>
 					<h3>Is it wet?</h3>
 					<h2>WHO CARES?</h2>
-					<h4>jk - skies: {weather.skies}</h4>
+					<h4>jk - Skies: {weather.skies}</h4>
 				</div>
 				<div className='advice'>
-					<h2>You know what they say...</h2>
+					<h2>Not feeling it? You know what they say...</h2>
 					<h3>"{advice}"</h3>
 				</div>
 				<div className='retro'>
@@ -85,7 +85,7 @@ function Display(props) {
 					<h3>{retro}</h3>
 				</div>
 				<div className='animals'>
-					<h2>Here is a dog:</h2>
+					<h2>Let this dog motivate you:</h2>
 					<img className='dog' src={dog} />
 				</div>
 				<div>
@@ -99,8 +99,7 @@ function Display(props) {
 				<div>
 					<h2>
 						Sometimes, when I'm feeling low, I'll watch the music video for She
-						Wolf by Shakira. And no - you can't change the music video. It's
-						this one or nothing.
+						Wolf by Shakira. Please enjoy.
 					</h2>
 					<ReactPlayer url='https://www.youtube.com/watch?v=booKP974B0k' />
 				</div>

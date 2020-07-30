@@ -27,7 +27,7 @@ function LyricForm(props) {
 
 	return (
 		<div>
-            <h2>Read the Pulitzer Prize winning lyrics of D4L's Laffy Taffy. Or Look up the lyrics to a lesser piece.</h2>
+            <h2>Read the Pulitzer Prize winning lyrics of D4L's Laffy Taffy. Let them wash over you. Or look up the lyrics to a lesser piece.</h2>
 
 			<form onSubmit={lyricSubmit}>
 				<label htmlFor='artist'>Artist: </label>
