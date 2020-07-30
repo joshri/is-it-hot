@@ -13,7 +13,7 @@ button {
   font-family: 'Raleway Dots', cursive;
   font-size: 12px;
 	display: flex;
-	justify-content: flex-start;
+	justify-content: space-between;
 	align-items: center;
 	height: 10vh;
 	width: 100vw;
@@ -45,7 +45,10 @@ button {
   border: 2px solid black;
   border-radius: 10px;
   height: 50vh;
-  width: 50vw;
+  width: 40vw;
+  padding: 10px;
+  margin: 0 0 0 25vw;
+  font-size: 12px;
 }
 
 main {
@@ -68,6 +71,10 @@ main {
 	justify-content: center;
   align-items: center;
   text-align: center;
+}
+
+.aboutButton {
+  margin: 20px 0 0 0;
 }
 
 .zipForm {

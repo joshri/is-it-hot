@@ -4,7 +4,7 @@ import ReactPlayer from 'react-player';
 function SheWolf(props) {
     return (
 			<div>
-				<h2>Wow. This is an emergency...</h2>
+                <h2>Final Thought:</h2>
 				<h2>
 					...sometimes, when I'm feeling low, I'll watch the music video for She
 					Wolf by Shakira. This is literally the best I've got. Good Luck out
