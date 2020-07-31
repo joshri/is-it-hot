@@ -1,5 +1,4 @@
 import React, {useState} from 'react';
-import ChangeIt from './ChangeIt';
 
 function Kitty(props) {
     
@@ -8,10 +7,10 @@ function Kitty(props) {
 	let url = `https://placekitten.com/${random}/200`;
 
 	return (
-		<div>
-			<h3>or this cat:</h3>
-			<img className='kitty' src={url} />
-            <button onClick={() => setRandom(Math.floor(Math.random() * 220) + 180)}>
+		<div className='kitty'>
+			<h3 className='dogh2'>or this cat:</h3>
+			<img className='kittyImg' src={url} />
+            <button className='kittyButton' onClick={() => setRandom(Math.floor(Math.random() * 220) + 180)}>
 				CHANGE IT!
 			</button>
 		</div>

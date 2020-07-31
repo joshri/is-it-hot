@@ -89,8 +89,6 @@ function Display(props) {
 				.then((json) =>
 					setPoke({ name: json.species.name, pic: json.sprites.front_default })
 				);
-		} else if (item === 'kitty') {
-			let random = Math.floor(Math.random() * 220) + 180;
 		} else if (item === 'shakira') {
             props.showError()
 		}
@@ -111,10 +109,10 @@ function Display(props) {
 				<div className='retro'>
 					<Retrograde retro={retro} />
 				</div>
-				<div className='dog'>
+				<div >
 					<Dog changeIt={changeIt} item={'dog'} dog={dog} />
 				</div>
-				<div>
+				<div className='kitty'>
 					<Kitty />
 				</div>
 				<div className='poke'>
@@ -128,7 +126,7 @@ function Display(props) {
 				<div>
 					<LyricForm />
 				</div>
-				<div className='sheWolf'>
+				<div >
 					<SheWolf changeIt={changeIt} item={'shakira'} />
 				</div>
 			</main>

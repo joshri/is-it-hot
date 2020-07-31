@@ -25,14 +25,14 @@ function LyricForm(props) {
 			.then((json) => {
 				setLyrics(json.lyrics);
 			});
-	}, []);
+	});
     
 	return (
 		<div className='lyricForm'>
 			<h1 className='lyricIntro'>Okay. If you really need some motivation...</h1>
 			<h2 className='lyricIntro'>
 				Read the Pulitzer Prize winning lyrics of D4L's Laffy Taffy.<br></br>Let them
-				wash over you.<br></br>Or look up the lyrics to a lesser piece.
+				wash over you.<br></br>Or look up the lyrics to a lesser piece and SING.
 			</h2>
 
 			<form className='lyricSubmit' onSubmit={lyricSubmit}>
