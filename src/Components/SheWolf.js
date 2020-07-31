@@ -11,7 +11,7 @@ function SheWolf(props) {
 					Wolf by Shakira.<br></br>This is literally the best I've got.<br></br>Don't even think about changing it.<br></br>Good Luck out
 					there in the world today champ.
 				</h2>
-				<ReactPlayer
+				<ReactPlayer controls
 					className='video'
 					url='https://www.youtube.com/watch?v=booKP974B0k'
 				/>

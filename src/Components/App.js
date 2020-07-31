@@ -8,7 +8,6 @@ import Home from './Home';
 import Display from './Display';
 import Error from './Error';
 
-
 class App extends React.Component {
 	constructor(props) {
 		super(props);
@@ -43,56 +42,89 @@ class App extends React.Component {
 	};
 
 	render() {
-		return (
-			<div className='App'>
-				<Header askAgain={this.askAgain} />
-				<About display={this.state.display} showModal={this.showModal} />
-				<Route
-					exact
-					path='/'
-					render={() => {
-						if (!this.state.showDisplay && !this.state.showError) {
-							return (
-								<Home
-									display={this.state.display}
-									showModal={this.showModal}
-									handleChange={this.handleChange}
-									handleSubmit={this.handleSubmit}
-								/>
-							);
-						}
-					}}
-				/>
-				<Route
-					path='/'
-					render={() => {
-						if (this.state.showDisplay) {
-							return (
-								<Display
-									showDisplay={this.state.showDisplay}
-									showError={this.showError}
-									zip={this.state.zip}
-								/>
-							);
-						}
-					}}
-				/>
-				<Route
-					path='/'
-					render={() => {
-						if (this.state.showError) {
-							return (
-								<Error
-									showError={this.state.showError}
-									askAgain={this.askAgain}
-								/>
-							);
-						}
-					}}
-				/>
-			</div>
-		);
+		if (!this.state.showDisplay && !this.state.showError) {
+			return (
+				<div>
+					<Header askAgain={this.askAgain} />
+					<About display={this.state.display} showModal={this.showModal} />
+					<Home
+						showModal={this.showModal}
+						handleChange={this.handleChange}
+						handleSubmit={this.handleSubmit}
+					/>
+				</div>
+			);
+		} else if (this.state.showDisplay) {
+			return (
+				<div>
+					<Header askAgain={this.askAgain} />
+					<Display
+						showError={this.showError}
+						zip={this.state.zip}
+					/>
+				</div>
+			);
+		} else if (this.state.showError) {
+			return (
+				<div>
+					<Header askAgain={this.askAgain} />
+					<Error showError={this.state.showError} askAgain={this.askAgain} />
+				</div>
+			);
+		}
 	}
+
+	// render() {
+	// 	return (
+	// 		<div className='App'>
+	// 			<Header askAgain={this.askAgain} />
+	// 			<About display={this.state.display} showModal={this.showModal} />
+	// 			<Route
+	// 				exact
+	// 				path='/'
+	// 				render={() => {
+	// 					if (!this.state.showDisplay && !this.state.showError) {
+	// 						return (
+	// 							<Home
+	// 								display={this.state.display}
+	// 								showModal={this.showModal}
+	// 								handleChange={this.handleChange}
+	// 								handleSubmit={this.handleSubmit}
+	// 							/>
+	// 						);
+	// 					}
+	// 				}}
+	// 			/>
+	// 			<Route
+	// 				path='/'
+	// 				render={() => {
+	// 					if (this.state.showDisplay) {
+	// 						return (
+	// 							<Display
+	// 								showDisplay={this.state.showDisplay}
+	// 								showError={this.showError}
+	// 								zip={this.state.zip}
+	// 							/>
+	// 						);
+	// 					}
+	// 				}}
+	// 			/>
+	// 			<Route
+	// 				path='/'
+	// 				render={() => {
+	// 					if (this.state.showError) {
+	// 						return (
+	// 							<Error
+	// 								showError={this.state.showError}
+	// 								askAgain={this.askAgain}
+	// 							/>
+	// 						);
+	// 					}
+	// 				}}
+	// 			/>
+	// 		</div>
+	// 	);
+	// }
 }
 
 export default App;

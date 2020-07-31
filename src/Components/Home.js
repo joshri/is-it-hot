@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import About from './About';
 
 class Home extends Component {
 	render() {
@@ -19,7 +18,10 @@ class Home extends Component {
 					</button>
 				</form>
 
-				<button id='about' className='aboutButton' onClick={this.props.showModal}>
+				<button
+					id='about'
+					className='aboutButton'
+					onClick={this.props.showModal}>
 					ABOUT
 				</button>
 			</div>

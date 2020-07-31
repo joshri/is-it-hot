@@ -40,14 +40,14 @@ function LyricForm(props) {
 				<input
 					id='artist'
 					type='text'
-					placeholder='artist'
+					placeholder='D4L'
 					onChange={artistChange}
 				/>
 				<label htmlFor='title'>Title: </label>
 				<input
 					id='title'
 					type='text'
-					placeholder='title'
+					placeholder='Laffy Taffy'
 					onChange={titleChange}
 				/>
 				<button type='submit'>CHANGE IT</button>

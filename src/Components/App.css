@@ -153,16 +153,19 @@ animation-fill-mode: forwards;
 }
 
 .retro {
-  margin-top: 20vh;
-  margin-bottom: 30vh;
+  margin-top: 15vh;
+  margin-bottom: 15vh;
+}
+
+.retroResult {
+  width: 80vw;
 }
 
 .poke {
-  margin: 20vh;
+  margin: 10vh 0 10vh 0;
 }
 
 .dog {
-  
   margin-right: 40vw;
   font-size: 12px;
   align-items: center;
@@ -183,7 +186,6 @@ animation-fill-mode: forwards;
 .dogImg, .kittyImg {
 	width: 50vw;
   height: 50vh;
-  padding: 10px;
 }
 
 .pokeImg {
@@ -196,8 +198,8 @@ animation-fill-mode: forwards;
 }
 .lyrics {
   font-size: 75%;
-  border: 1px solid black;
-  flex-shrink: 2;
+  border: 2px solid black;
+  border-radius: 15px;
   height: 500px;
   padding: 10px;
   overflow: scroll;
@@ -220,8 +222,18 @@ animation-fill-mode: forwards;
 
 .video {
   border: 5px solid gold;
+  border-radius: 10px;
 }
 
 .changeIt {
   padding: 20px;
+}
+
+img {
+  border: 2px solid black;
+  border-radius: 20px;
+}
+
+.kittyButton {
+  margin-top: 20px;
 }

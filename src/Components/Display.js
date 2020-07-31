@@ -7,9 +7,6 @@ import Kitty from './Kitty';
 import Pokemon from './Pokemon';
 import LyricForm from './LyricForm';
 import SheWolf from './SheWolf';
-import Error from './Error';
-
-import { motion } from 'framer-motion';
 
 function Display(props) {
 	const weatherKey = process.env.REACT_APP_WEATHER_KEY;
@@ -106,7 +103,7 @@ function Display(props) {
 				<div className='advice'>
 					<Advice changeIt={changeIt} item={'advice'} advice={advice} />
 				</div>
-				<div className='retro'>
+				<div >
 					<Retrograde retro={retro} />
 				</div>
 				<div >

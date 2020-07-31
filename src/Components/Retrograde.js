@@ -2,9 +2,9 @@ import React from 'react';
 
 function Retrograde(props) {
     return (
-			<div>
+			<div className='retro'>
 				<h2>Need an excuse?</h2>
-				<h3>{props.retro}</h3>
+				<h3 className='retroResult'>{props.retro}</h3>
 			</div>
 		);
 }
