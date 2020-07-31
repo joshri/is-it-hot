@@ -29,11 +29,15 @@ function LyricForm(props) {
     
 	return (
 		<div className='lyricForm'>
-			<h1 className='lyricIntro'>Okay. If you really need some motivation...</h1>
+			<h1 className='lyricIntro'>
+				Okay. If you really need some motivation...
+			</h1>
 			<h2 className='lyricIntro'>
-				Read the Pulitzer Prize winning lyrics of D4L's Laffy Taffy.<br></br>Let them
-				wash over you.<br></br>Or look up the lyrics to a lesser piece and SING.
+				Read the Pulitzer Prize winning lyrics of D4L's Laffy Taffy.<br></br>Let
+				them wash over you.<br></br>Or look up the lyrics to a lesser piece and
+				SING.
 			</h2>
+			<h5>source: lyricsovh.docs.apiary.io/#reference</h5>
 
 			<form className='lyricSubmit' onSubmit={lyricSubmit}>
 				<label htmlFor='artist'>Artist: </label>

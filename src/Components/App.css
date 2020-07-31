@@ -133,7 +133,7 @@ margin-bottom: 10vh;
 margin-top: 10vh;
 color: black;
 opacity: 0;
-animation-duration: 2s;
+animation-duration: 2.5s;
 animation-direction: normal;
 animation-fill-mode: forwards;
 }
@@ -221,7 +221,7 @@ animation-fill-mode: forwards;
 }
 
 .video {
-  border: 5px solid gold;
+  border: 5px solid black;
   border-radius: 10px;
 }
 
@@ -236,4 +236,9 @@ img {
 
 .kittyButton {
   margin-top: 20px;
+}
+
+h5 {
+  margin: 5px;
+  font-size: 12px;
 }

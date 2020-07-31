@@ -19,6 +19,7 @@ https://docs.google.com/document/d/1LoUIACK0nUY89c-B0Xb0zcydbzadaKdmbZmB_m5C5cE/
 - dog.ceo/dog-api/
 - lyricsovh.docs.apiary.io/#reference
 - pokeapi.co/
+- placekitten.com
 
 ## Component Structure
 - App

@@ -9,6 +9,7 @@ function Pokemon(props) {
 				<h3>
 					{props.poke.name.toUpperCase()} #{props.pokeNum}
 				</h3>
+				<h5>source: pokeapi.co</h5>
 				<ChangeIt changeIt={props.changeIt} item={props.item} />
 			</div>
 		);

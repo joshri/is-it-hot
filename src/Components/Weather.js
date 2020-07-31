@@ -11,6 +11,7 @@ function Weather(props) {
 					</h2>
 					<h3>Is it wet?</h3>
 					<h4>Sky Status: {props.weather.skies}</h4>
+					<h5>source: openweathermap.org/api</h5>
 				</div>
 		);
 }
