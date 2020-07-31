@@ -4,7 +4,7 @@ function About(props) {
 	return (
 		<div style={{display: `${props.display}`}}className='modal'>
 			<p>This app was created in React with:</p>
-			<ul>
+			<ul style={{listStyleType: 'none', fontSize: 10}}>
 				<li>fonts.google.com</li>
 				<li>framer.com/api/motion/</li>
 				<li>openweathermap.org/api</li>

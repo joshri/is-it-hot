@@ -1,4 +1,5 @@
 import React from 'react';
+import ChangeIt from './ChangeIt'
 
 function Pokemon(props) {
     return (
@@ -8,6 +9,7 @@ function Pokemon(props) {
 				<h3>
 					{props.poke.name.toUpperCase()} #{props.pokeNum}
 				</h3>
+				<ChangeIt changeIt={props.changeIt} item={props.item} />
 			</div>
 		);
 }

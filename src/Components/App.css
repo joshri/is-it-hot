@@ -46,10 +46,17 @@ button {
   border: 2px solid black;
   border-radius: 10px;
   height: 50vh;
-  width: 40vw;
+  width: 50vw;
   padding: 10px;
   margin: 0 0 0 25vw;
   font-size: 12px;
+  
+}
+
+ul {
+  display: flex;
+  flex-direction: column;
+  width: 20em;
 }
 
 main {
@@ -136,6 +143,9 @@ animation-fill-mode: forwards;
 .dogImg {
 	width: 200px;
 	height: 200px;
+}
+.dog {
+  font-size: 12px;
 }
 
 .kitty {

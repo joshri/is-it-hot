@@ -5,7 +5,7 @@ class Error extends Component {
         return (
             <div className='error'>
                 <h1>HEY!</h1>
-                <h3>Type in a real zip next time bub.</h3>
+                <h3>You have done something horribly wrong. I hope you know what you did.</h3>
                 <button onClick={this.props.askAgain}>SAY SORRY</button>
             </div>
         );

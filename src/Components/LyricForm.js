@@ -23,8 +23,9 @@ function LyricForm(props) {
 		fetch(url)
 			.then((res) => res.json())
 			.then((json) => {
-                setLyrics(json.lyrics)});
-	});
+				setLyrics(json.lyrics);
+			});
+	}, []);
     
 	return (
 		<div className='lyricForm'>
