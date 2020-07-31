@@ -22,18 +22,19 @@ function LyricForm(props) {
 	useEffect(() => {
 		fetch(url)
 			.then((res) => res.json())
-			.then((json) => setLyrics(json.lyrics));
+			.then((json) => {
+                setLyrics(json.lyrics)});
 	});
-
+    
 	return (
-		<div >
-			<h1>Okay. If you really need some motivation...</h1>
-			<h2>
-				Read the Pulitzer Prize winning lyrics of D4L's Laffy Taffy. Let them
-				wash over you. Or look up the lyrics to a lesser piece.
+		<div className='lyricForm'>
+			<h1 className='lyricIntro'>Okay. If you really need some motivation...</h1>
+			<h2 className='lyricIntro'>
+				Read the Pulitzer Prize winning lyrics of D4L's Laffy Taffy.<br></br>Let them
+				wash over you.<br></br>Or look up the lyrics to a lesser piece.
 			</h2>
 
-			<form onSubmit={lyricSubmit}>
+			<form className='lyricSubmit' onSubmit={lyricSubmit}>
 				<label htmlFor='artist'>Artist: </label>
 				<input
 					id='artist'
@@ -51,7 +52,11 @@ function LyricForm(props) {
 				<button type='submit'>CHANGE IT</button>
 			</form>
 			<h3>LYRICS:</h3>
-			<p className='lyrics'>{lyrics}</p>
+			<div className='lyrics'>
+				{lyrics.split('\n').map((x) => (
+					<p>{x}</p>
+				))}
+			</div>
 		</div>
 	);
 }

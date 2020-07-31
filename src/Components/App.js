@@ -8,6 +8,7 @@ import Home from './Home';
 import Display from './Display';
 import Error from './Error';
 
+
 class App extends React.Component {
 	constructor(props) {
 		super(props);

@@ -3,6 +3,7 @@ import Weather from './Weather';
 import Advice from './Advice';
 import Retrograde from './Retrograde';
 import Dog from './Dog';
+import Kitty from './Kitty';
 import Pokemon from './Pokemon';
 import LyricForm from './LyricForm';
 import SheWolf from './SheWolf';
@@ -43,7 +44,7 @@ function Display(props) {
 					feels_like: json.main.feels_like,
 					skies: json.weather[0].main,
 				});
-				setHotOrNot(json.main.feels_like < 65 ? 'NOT' : 'HOT');
+				setHotOrNot(json.main.feels_like < 60 ? 'NOT' : 'HOT');
 			})
 			.catch(() => props.showError());
 		fetch('https://api.adviceslip.com/advice')
@@ -89,10 +90,13 @@ function Display(props) {
 				<div className='dog'>
 					<Dog dog={dog} />
 				</div>
+                <div>
+                    <Kitty />
+                </div>
 				<div className='poke'>
 					<Pokemon poke={poke} pokeNum={pokeNum} />
 				</div>
-				<div className='lyricForm'>
+				<div >
 					<LyricForm />
 				</div>
 				<div className='sheWolf'>

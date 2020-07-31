@@ -11,6 +11,7 @@ function About(props) {
 				<li>mercuryretrogradeapi.com</li>
 				<li>api.adviceslip.com</li>
 				<li>dog.ceo/dog-api/</li>
+                <li>placekitten.com</li>
 				<li>lyricsovh.docs.apiary.io/#reference</li>
 				<li>pokeapi.co/</li>
 			</ul>
