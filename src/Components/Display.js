@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Weather from './Weather';
+import Color from './Color'
 import Advice from './Advice';
 import Retrograde from './Retrograde';
 import Dog from './Dog';
@@ -22,7 +23,8 @@ function Display(props) {
 		name: '',
 		feels_like: '',
 		skies: '',
-	});
+    });
+    let [color, setColor] = useState('white')
 	let [hotOrNot, setHotOrNot] = useState('');
 	let [advice, setAdvice] = useState('');
 	let [retro, setRetro] = useState('');
@@ -92,21 +94,30 @@ function Display(props) {
 	};
 
 	while (!hotOrNot) {
-		return <h1>LOADING</h1>;
+		return <h1></h1>;
 	}
 	return (
-		<div>
-			<main>
+		<div
+			style={{
+				backgroundColor: color,
+				backgroundSize: 'cover',
+				transition: 'background-color',
+				transitionDuration: '1s',
+			}}>
+			<div>
 				<div className='weather'>
 					<Weather weather={weather} hotOrNot={hotOrNot} />
+				</div>
+				<div>
+					<Color setColor={setColor} />
 				</div>
 				<div className='advice'>
 					<Advice changeIt={changeIt} item={'advice'} advice={advice} />
 				</div>
-				<div >
+				<div>
 					<Retrograde retro={retro} />
 				</div>
-				<div >
+				<div>
 					<Dog changeIt={changeIt} item={'dog'} dog={dog} />
 				</div>
 				<div className='kitty'>
@@ -123,10 +134,10 @@ function Display(props) {
 				<div>
 					<LyricForm />
 				</div>
-				<div >
+				<div>
 					<SheWolf changeIt={changeIt} item={'shakira'} />
 				</div>
-			</main>
+			</div>
 		</div>
 	);
 }

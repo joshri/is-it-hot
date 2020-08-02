@@ -3,10 +3,9 @@ import React from 'react';
 function About(props) {
 	return (
 		<div style={{ display: `${props.display}` }} className='modal'>
-			<p>This app was created in React with:</p>
+			<p>This React experiment was created with:</p>
 			<ul style={{ listStyleType: 'none', fontSize: 10 }}>
 				<li>fonts.google.com</li>
-				<li>framer.com/api/motion/</li>
 				<li>openweathermap.org/api</li>
 				<li>mercuryretrogradeapi.com</li>
 				<li>api.adviceslip.com</li>

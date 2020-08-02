@@ -1,12 +1,18 @@
+body {
+  margin: 0
+}
+
+
 div {
   font-family: 'Montserrat', sans-serif;
 }
 
 button {
   font-family: 'Montserrat', sans-serif;
-  background: transparent;
   border-radius: 15px;
   padding: 10px;
+  background: transparent;
+
 }
 
 .header {
@@ -73,7 +79,8 @@ main {
 .poke,
 .lyricForm,
 .sheWolf,
-.kitty {
+.kitty,
+.color {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -153,8 +160,7 @@ animation-fill-mode: forwards;
 }
 
 .retro {
-  margin-top: 15vh;
-  margin-bottom: 15vh;
+  margin: 20px;
 }
 
 .retroResult {
@@ -173,10 +179,10 @@ animation-fill-mode: forwards;
 }
 
 .dogh2 {
+  align-items: center;
   text-align: center;
   width: 50%;
 }
-
 
 .kitty {
   align-items: center;
@@ -214,6 +220,7 @@ animation-fill-mode: forwards;
 
 .sheWolf, .kitty {
   padding: 30px;
+  align-items: center;
 }
 
 .confession {
@@ -241,4 +248,11 @@ img {
 h5 {
   margin: 5px;
   font-size: 12px;
+}
+
+.color {
+  font-size:
+  12px;
+  padding: 10px; 
+  margin: 20px;
 }

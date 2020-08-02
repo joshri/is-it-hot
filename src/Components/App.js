@@ -1,7 +1,5 @@
 import React from 'react';
-import './App.css';
-import { motion } from 'framer-motion';
-import { Route } from 'react-router-dom';
+import './App.css'
 import Header from './Header';
 import About from './About';
 import Home from './Home';
@@ -15,7 +13,8 @@ class App extends React.Component {
 			showDisplay: false,
 			showError: false,
 			display: 'none',
-			zip: '',
+      zip: '',
+      
 		};
 	}
 
@@ -56,7 +55,7 @@ class App extends React.Component {
 			);
 		} else if (this.state.showDisplay) {
 			return (
-				<div>
+				<div style={{backgroundColor: this.state.color, borderColor: this.state.color}}>
 					<Header askAgain={this.askAgain} />
 					<Display
 						showError={this.showError}
@@ -73,58 +72,6 @@ class App extends React.Component {
 			);
 		}
 	}
-
-	// render() {
-	// 	return (
-	// 		<div className='App'>
-	// 			<Header askAgain={this.askAgain} />
-	// 			<About display={this.state.display} showModal={this.showModal} />
-	// 			<Route
-	// 				exact
-	// 				path='/'
-	// 				render={() => {
-	// 					if (!this.state.showDisplay && !this.state.showError) {
-	// 						return (
-	// 							<Home
-	// 								display={this.state.display}
-	// 								showModal={this.showModal}
-	// 								handleChange={this.handleChange}
-	// 								handleSubmit={this.handleSubmit}
-	// 							/>
-	// 						);
-	// 					}
-	// 				}}
-	// 			/>
-	// 			<Route
-	// 				path='/'
-	// 				render={() => {
-	// 					if (this.state.showDisplay) {
-	// 						return (
-	// 							<Display
-	// 								showDisplay={this.state.showDisplay}
-	// 								showError={this.showError}
-	// 								zip={this.state.zip}
-	// 							/>
-	// 						);
-	// 					}
-	// 				}}
-	// 			/>
-	// 			<Route
-	// 				path='/'
-	// 				render={() => {
-	// 					if (this.state.showError) {
-	// 						return (
-	// 							<Error
-	// 								showError={this.state.showError}
-	// 								askAgain={this.askAgain}
-	// 							/>
-	// 						);
-	// 					}
-	// 				}}
-	// 			/>
-	// 		</div>
-	// 	);
-	// }
 }
 
 export default App;
