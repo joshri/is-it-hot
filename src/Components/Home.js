@@ -16,9 +16,7 @@ class Home extends Component {
 
 					<Button type='submit'>HOT OR NOT?</Button>
 				</form>
-				<Button
-					id='about'
-					onClick={this.props.showModal}>
+				<Button id='about' onClick={this.props.showModal}>
 					ABOUT
 				</Button>
 			</div>

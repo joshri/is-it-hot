@@ -1,15 +1,12 @@
 import React from 'react';
-import Button from './Button'
-
-
+import Button from './Button';
 
 function Advice(props) {
-
-const adviceChange = () => {
-	fetch('https://api.adviceslip.com/advice')
-		.then((res) => res.json())
-		.then((json) => props.setAdvice(json.slip.advice));
-};
+	const adviceChange = () => {
+		fetch('https://api.adviceslip.com/advice')
+			.then((res) => res.json())
+			.then((json) => props.setAdvice(json.slip.advice));
+	};
 
 	return (
 		<div>

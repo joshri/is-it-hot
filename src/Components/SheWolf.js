@@ -17,7 +17,8 @@ function SheWolf(props) {
 				className='video'
 				url='https://www.youtube.com/watch?v=booKP974B0k'
 			/>
-			<Button style={{marginTop: 20}} onClick={props.showError}>CHANGE IT!
+			<Button style={{ marginTop: 20 }} onClick={props.showError}>
+				CHANGE IT!
 			</Button>
 		</div>
 	);

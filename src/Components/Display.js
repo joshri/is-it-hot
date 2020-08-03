@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Weather from './Weather';
-import Color from './Color'
+import Color from './Color';
 import Advice from './Advice';
 import Retrograde from './Retrograde';
 import Dog from './Dog';
@@ -23,8 +23,8 @@ function Display(props) {
 		name: '',
 		feels_like: '',
 		skies: '',
-    });
-    let [color, setColor] = useState('white')
+	});
+	let [color, setColor] = useState('white');
 	let [hotOrNot, setHotOrNot] = useState('');
 	let [advice, setAdvice] = useState('');
 	let [retro, setRetro] = useState('');
@@ -102,11 +102,7 @@ function Display(props) {
 					<Kitty />
 				</div>
 				<div className='poke'>
-					<Pokemon
-						poke={poke}
-						pokeNum={pokeNum}
-						setPoke={setPoke}
-					/>
+					<Pokemon poke={poke} pokeNum={pokeNum} setPoke={setPoke} />
 				</div>
 				<div>
 					<LyricForm />

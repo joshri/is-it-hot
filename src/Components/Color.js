@@ -10,7 +10,12 @@ function Color(props) {
 	return (
 		<div className='color'>
 			<h2>How does that make you feel?</h2>
-			<form style={{width: '80vw', display: 'flex', justifyContent: 'space-evenly'}}>
+			<form
+				style={{
+					width: '80vw',
+					display: 'flex',
+					justifyContent: 'space-evenly',
+				}}>
 				<Button onClick={changeColor} type='submit' id='#ff8080'>
 					ANGRY
 				</Button>
@@ -31,7 +36,11 @@ function Color(props) {
 					EMPTY
 				</Button>
 			</form>
-			<Button style={{marginTop: 20}} onClick={changeColor} type='submit' id='white'>
+			<Button
+				style={{ marginTop: 20 }}
+				onClick={changeColor}
+				type='submit'
+				id='white'>
 				RESET
 			</Button>
 		</div>
