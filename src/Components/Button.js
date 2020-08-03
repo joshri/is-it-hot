@@ -5,6 +5,7 @@ Button = styled.button`
 	font-family: 'Montserrat', sans-serif;
 	border-radius: 15px;
 	padding: 10px;
+	margin: 10px;
 	background: transparent;
 	border: 2px solid black;
 	&:hover {

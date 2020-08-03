@@ -6,7 +6,7 @@ class Header extends Component {
 	render() {
 		return (
 			<div className='header'>
-				<h1 className='title'>
+				<h1 style={{ marginLeft: 20 }}>
 					Is It Hot?<br></br>Your Instant Guide.
 				</h1>
 				<Button style={{ marginRight: 20 }} onClick={this.props.askAgain}>

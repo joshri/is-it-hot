@@ -5,7 +5,7 @@ function About(props) {
 	return (
 		<div style={{ display: `${props.display}` }} className='modal'>
 			<p>This React experiment was created with:</p>
-			<ul style={{ listStyleType: 'none', fontSize: 10 }}>
+			<ul>
 				<li>fonts.google.com</li>
 				<li>openweathermap.org/api</li>
 				<li>mercuryretrogradeapi.com</li>

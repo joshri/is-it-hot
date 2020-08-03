@@ -6,9 +6,9 @@ function SheWolf(props) {
 	return (
 		<div className='sheWolf'>
 			<h2>Final Thought:</h2>
-			<h2 className='confession'>
+			<h2 className='lyricIntro'>
 				...sometimes, when I'm feeling low, I'll watch the music video for She
-				Wolf by Shakira.<br></br>This is literally the best I've got.<br></br>
+				Wolf by Shakira.<br></br>
 				Don't even think about changing it.<br></br>Good Luck out there in the
 				world today champ.
 			</h2>

@@ -1,9 +1,6 @@
 body {
 	margin: 0;
-}
-
-div {
-	font-family: 'Montserrat', sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .header {
@@ -23,10 +20,6 @@ div {
 	z-index: 10000;
 }
 
-.title {
-	margin-left: 20px;
-}
-
 .hide {
 	display: none;
 }
@@ -43,19 +36,15 @@ div {
 	width: 50vw;
 	padding: 10px;
 	margin: 0 0 0 25vw;
-	font-size: 12px;
+	font-size: 16px;
 }
 
 ul {
 	display: flex;
 	flex-direction: column;
-	width: 20em;
-}
-
-main {
-	display: flex;
-	flex-direction: column;
-	margin-top: 10vh;
+  width: 20em;
+  list-style-type: none;
+  font-size: 12px
 }
 
 .home,
@@ -94,7 +83,6 @@ main {
 .home {
 	margin-top: 15vh;
 	height: 50vh;
-	font-family: 'Montserrat', sans-serif;
 }
 
 .error {
@@ -105,7 +93,7 @@ main {
 	margin-top: 15vh;
 	height: 50vh;
 	width: 100vw;
-	font-size: 150%;
+  font-size: 150%;
 }
 
 .error1 {
@@ -114,6 +102,7 @@ main {
 }
 
 .error2 {
+  font-family: 'Raleway Dots', cursive;
 	font-size: 30px;
 	text-align: center;
 }
@@ -143,14 +132,6 @@ main {
 	}
 }
 
-.retro {
-	margin: 20px;
-}
-
-.retroResult {
-	width: 80vw;
-}
-
 .poke {
 	margin: 10vh 0 10vh 0;
 }
@@ -176,6 +157,7 @@ main {
 .lyricIntro {
 	font-size: 20px;
 }
+
 .lyrics {
 	font-size: 75%;
 	border: 2px solid black;
@@ -184,6 +166,7 @@ main {
 	padding: 10px;
 	overflow: scroll;
 }
+
 .lyricSubmit {
 	display: flex;
 	justify-content: space-evenly;
@@ -196,10 +179,6 @@ main {
 .kitty {
 	padding: 30px;
 	align-items: center;
-}
-
-.confession {
-	font-size: 100%;
 }
 
 .video {
@@ -216,7 +195,7 @@ img {
 
 h5 {
 	margin: 5px;
-	font-size: 12px;
+	font-size: 14px;
 }
 
 .color {
