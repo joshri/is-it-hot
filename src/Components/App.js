@@ -1,10 +1,11 @@
 import React from 'react';
-import './App.css'
+import './App.css';
 import Header from './Header';
 import About from './About';
 import Home from './Home';
 import Display from './Display';
 import Error from './Error';
+import styled from 'styled-components';
 
 class App extends React.Component {
 	constructor(props) {
@@ -13,8 +14,7 @@ class App extends React.Component {
 			showDisplay: false,
 			showError: false,
 			display: 'none',
-      zip: '',
-      
+			zip: '',
 		};
 	}
 
@@ -55,12 +55,13 @@ class App extends React.Component {
 			);
 		} else if (this.state.showDisplay) {
 			return (
-				<div style={{backgroundColor: this.state.color, borderColor: this.state.color}}>
+				<div
+					style={{
+						backgroundColor: this.state.color,
+						borderColor: this.state.color,
+					}}>
 					<Header askAgain={this.askAgain} />
-					<Display
-						showError={this.showError}
-						zip={this.state.zip}
-					/>
+					<Display showError={this.showError} zip={this.state.zip} />
 				</div>
 			);
 		} else if (this.state.showError) {

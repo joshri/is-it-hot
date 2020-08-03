@@ -1,4 +1,5 @@
 import React from 'react';
+import Button from './Button'
 
 function About(props) {
 	return (
@@ -15,8 +16,8 @@ function About(props) {
 				<li>pokeapi.co/</li>
 			</ul>
 			<p>By Joshua Israel</p>
-			<button onClick={props.showModal}>COOL</button>
-		</div>
+			<Button onClick={props.showModal}>COOL</Button>
+            </div>
 	);
 }
 

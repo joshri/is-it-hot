@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import Button from './Button'
 
 function LyricForm(props) {
 	let [artist, setArtist] = useState('D4L');
@@ -26,7 +27,7 @@ function LyricForm(props) {
 				setLyrics(json.lyrics);
 			});
 	});
-    
+
 	return (
 		<div className='lyricForm'>
 			<h1 className='lyricIntro'>
@@ -54,7 +55,7 @@ function LyricForm(props) {
 					placeholder='Laffy Taffy'
 					onChange={titleChange}
 				/>
-				<button type='submit'>CHANGE IT</button>
+				<Button type='submit'>CHANGE IT!</Button>
 			</form>
 			<h3>LYRICS:</h3>
 			<div className='lyrics'>

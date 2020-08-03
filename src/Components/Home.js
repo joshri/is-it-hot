@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Button from './Button';
 
 class Home extends Component {
 	render() {
@@ -13,17 +14,13 @@ class Home extends Component {
 						placeholder='Zip Code Here!!'
 						onChange={this.props.handleChange}></input>
 
-					<button className='submit' type='submit'>
-						HOT OR NOT
-					</button>
+					<Button type='submit'>HOT OR NOT?</Button>
 				</form>
-
-				<button
+				<Button
 					id='about'
-					className='aboutButton'
 					onClick={this.props.showModal}>
 					ABOUT
-				</button>
+				</Button>
 			</div>
 		);
 	}

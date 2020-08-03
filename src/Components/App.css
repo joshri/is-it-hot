@@ -7,14 +7,6 @@ div {
   font-family: 'Montserrat', sans-serif;
 }
 
-button {
-  font-family: 'Montserrat', sans-serif;
-  border-radius: 15px;
-  padding: 10px;
-  background: transparent;
-
-}
-
 .header {
   font-family: 'Raleway Dots', cursive;
   font-size: 12px;
@@ -34,9 +26,6 @@ button {
 
 .title {
 	margin-left: 20px;
-}
-.askAgain {
-	margin-right: 5vw;
 }
 
 .hide {
@@ -86,10 +75,6 @@ main {
 	justify-content: center;
   align-items: center;
   text-align: center;
-}
-
-.aboutButton {
-  margin: 20px 0 0 0;
 }
 
 .zipForm {
@@ -232,17 +217,9 @@ animation-fill-mode: forwards;
   border-radius: 10px;
 }
 
-.changeIt {
-  padding: 20px;
-}
-
 img {
   border: 2px solid black;
   border-radius: 20px;
-}
-
-.kittyButton {
-  margin-top: 20px;
 }
 
 h5 {

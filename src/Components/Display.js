@@ -71,28 +71,6 @@ function Display(props) {
 			);
 	}, []);
 
-	const changeIt = (item) => {
-		if (item === 'advice') {
-			fetch('https://api.adviceslip.com/advice')
-				.then((res) => res.json())
-				.then((json) => setAdvice(json.slip.advice));
-		} else if (item === 'dog') {
-			fetch('https://dog.ceo/api/breeds/image/random')
-				.then((res) => res.json())
-				.then((json) => {
-					setDog(json.message);
-				});
-		} else if (item === 'pokemon') {
-			fetch(`https://pokeapi.co/api/v2/pokemon/${pokeNum}`)
-				.then((res) => res.json())
-				.then((json) =>
-					setPoke({ name: json.species.name, pic: json.sprites.front_default })
-				);
-		} else if (item === 'shakira') {
-            props.showError()
-		}
-	};
-
 	while (!hotOrNot) {
 		return <h1></h1>;
 	}
@@ -112,13 +90,13 @@ function Display(props) {
 					<Color setColor={setColor} />
 				</div>
 				<div className='advice'>
-					<Advice changeIt={changeIt} item={'advice'} advice={advice} />
+					<Advice advice={advice} setAdvice={setAdvice} />
 				</div>
 				<div>
 					<Retrograde retro={retro} />
 				</div>
 				<div>
-					<Dog changeIt={changeIt} item={'dog'} dog={dog} />
+					<Dog dog={dog} setDog={setDog} />
 				</div>
 				<div className='kitty'>
 					<Kitty />
@@ -127,15 +105,14 @@ function Display(props) {
 					<Pokemon
 						poke={poke}
 						pokeNum={pokeNum}
-						changeIt={changeIt}
-						item={'pokemon'}
+						setPoke={setPoke}
 					/>
 				</div>
 				<div>
 					<LyricForm />
 				</div>
 				<div>
-					<SheWolf changeIt={changeIt} item={'shakira'} />
+					<SheWolf showError={props.showError} item={'shakira'} />
 				</div>
 			</div>
 		</div>

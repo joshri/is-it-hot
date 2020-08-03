@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+import Button from './Button';
 
 class Header extends Component {
 	render() {
@@ -8,9 +9,9 @@ class Header extends Component {
 				<h1 className='title'>
 					Is It Hot?<br></br>Your Instant Guide.
 				</h1>
-				<button className='askAgain' onClick={this.props.askAgain}>
-					ASK AGAIN
-				</button>
+				<Button style={{marginRight: 20}} onClick={this.props.askAgain}>
+					ASK AGAIN?
+				</Button>
 			</div>
 		);
 	}
