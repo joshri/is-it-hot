@@ -5,7 +5,6 @@ import About from './About';
 import Home from './Home';
 import Display from './Display';
 import Error from './Error';
-import styled from 'styled-components';
 
 class App extends React.Component {
 	constructor(props) {
