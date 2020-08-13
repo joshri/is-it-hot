@@ -7,8 +7,10 @@ import Display from './Display';
 import Error from './Error';
 
 class App extends React.Component {
-	constructor(props) {
-		super(props);
+	// Hou comment: No need to pass props into your constructor() and super() since
+	// you're not accessing this.props inside the constructor()
+	constructor() {
+		super();
 		this.state = {
 			showDisplay: false,
 			showError: false,
@@ -18,8 +20,7 @@ class App extends React.Component {
 	}
 
 	handleChange = (event) => {
-		let propertyName = event.target.id;
-		this.setState({ [propertyName]: event.target.value });
+		this.setState({ [event.target.id]: event.target.value });
 	};
 
 	handleSubmit = (event) => {
@@ -37,12 +38,23 @@ class App extends React.Component {
 		} else {
 			this.setState({ display: 'none' });
 		}
+
+		// Hou comment: You can refactor lines 36-40 to:
+		// this.setState({ display: event.target.id === 'about' ? 'flex' : 'none'});
 	};
 
 	render() {
+		// Hou comment: you could use destructuring to extract your state into variables at the top of the function, so you don't have to access them repeatedly in this.state
+		// const {
+		//  color,
+		// 	showDisplay,
+		// 	showError,
+		//  zip
+		// } = this.state
 		if (!this.state.showDisplay && !this.state.showError) {
 			return (
-				<div>
+				// Hou comment: you can use a React fragment <></> here instead of creating an unnecessary div tag: https://reactjs.org/docs/fragments.html
+				<>
 					<Header askAgain={this.askAgain} />
 					<About display={this.state.display} showModal={this.showModal} />
 					<Home
@@ -50,7 +62,7 @@ class App extends React.Component {
 						handleChange={this.handleChange}
 						handleSubmit={this.handleSubmit}
 					/>
-				</div>
+				</>
 			);
 		} else if (this.state.showDisplay) {
 			return (
@@ -65,10 +77,10 @@ class App extends React.Component {
 			);
 		} else if (this.state.showError) {
 			return (
-				<div>
+				<>
 					<Header askAgain={this.askAgain} />
 					<Error showError={this.state.showError} askAgain={this.askAgain} />
-				</div>
+				</>
 			);
 		}
 	}

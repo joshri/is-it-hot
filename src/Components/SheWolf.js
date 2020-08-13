@@ -15,8 +15,10 @@ function SheWolf(props) {
 			<ReactPlayer
 				controls
 				className='video'
-				url='https://www.youtube.com/watch?v=booKP974B0k'
+				// adding the query params below should fix the console error you see in the browser
+				url='https://www.youtube.com/watch?v=booKP974B0k&enablejsapi=1&origin=https://is-it-hot-daily.herokuapp.com/'
 			/>
+			{/* Hou comment: consider applying styles with a css selector in an external stylesheet rather than inlining the styles */}
 			<Button style={{ marginTop: 20 }} onClick={props.showError}>
 				CHANGE IT!
 			</Button>

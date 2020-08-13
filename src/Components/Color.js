@@ -1,6 +1,7 @@
 import React from 'react';
 import Button from './Button';
 
+// Hou comment: nice job using a functional component here! Color is a great candidate for the functional component pattern because it does not rely on state.
 function Color(props) {
 	const changeColor = (event) => {
 		event.preventDefault();
@@ -11,6 +12,7 @@ function Color(props) {
 		<div className='color'>
 			<h2>How does that make you feel?</h2>
 			<form
+				// Hou comment: try to avoid inline styles; use class selectors or style-components instead
 				style={{
 					width: '80vw',
 					display: 'flex',

@@ -1,9 +1,10 @@
 import React from 'react';
 import Button from './Button';
 
-function About(props) {
+// Hou comment: you can destructure your props like line 5
+function About({ display, showModal}) {
 	return (
-		<div style={{ display: `${props.display}` }} className='modal'>
+		<div style={{ display: `${display}` }} className='modal'>
 			<p>This React experiment was created with:</p>
 			<ul>
 				<li>fonts.google.com</li>
@@ -16,7 +17,7 @@ function About(props) {
 				<li>pokeapi.co/</li>
 			</ul>
 			<p>By Joshua Israel</p>
-			<Button onClick={props.showModal}>COOL</Button>
+			<Button onClick={showModal}>COOL</Button>
 		</div>
 	);
 }

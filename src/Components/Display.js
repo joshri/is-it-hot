@@ -9,6 +9,7 @@ import Pokemon from './Pokemon';
 import LyricForm from './LyricForm';
 import SheWolf from './SheWolf';
 
+// Hou comment: great job learning about and applying hooks in your project!
 function Display(props) {
 	const weatherKey = process.env.REACT_APP_WEATHER_KEY;
 
@@ -35,6 +36,10 @@ function Display(props) {
 	});
 
 	useEffect(() => {
+		// Hou comment: You could potentially refactor your multiple fetch calls and make them more succinct by using the Promise.all() method: https://gomakethings.com/waiting-for-multiple-all-api-responses-to-complete-with-the-vanilla-js-promise.all-method/
+
+		// Hou comment: as a follow up challenge, read about the async/await pattern and try to refactor
+		// your fetch call to use that pattern: https://dev.to/shoupn/javascript-fetch-api-and-using-asyncawait-47mp
 		fetch(weatherUrl)
 			.then((res) => res.json())
 			.then((json) => {
@@ -71,47 +76,40 @@ function Display(props) {
 			);
 	}, []);
 
+	// Hou comment: add a comment here to explain the purpose of lines 80-82
 	while (!hotOrNot) {
 		return <h1></h1>;
 	}
 	return (
-		<div
+		<main
+			// Hou comment: again, favor external stylesheets/styled-components over inline styles
 			style={{
 				backgroundColor: color,
 				backgroundSize: 'cover',
 				transition: 'background-color',
 				transitionDuration: '1s',
 			}}>
-			<div>
-				<div className='weather'>
-					<Weather weather={weather} hotOrNot={hotOrNot} />
-				</div>
-				<div>
-					<Color setColor={setColor} />
-				</div>
-				<div className='advice'>
-					<Advice advice={advice} setAdvice={setAdvice} />
-				</div>
-				<div>
-					<Retrograde retro={retro} />
-				</div>
-				<div>
-					<Dog dog={dog} setDog={setDog} />
-				</div>
-				<div className='kitty'>
-					<Kitty />
-				</div>
-				<div className='poke'>
-					<Pokemon poke={poke} pokeNum={pokeNum} setPoke={setPoke} />
-				</div>
-				<div>
-					<LyricForm />
-				</div>
-				<div>
-					<SheWolf showError={props.showError} item={'shakira'} />
-				</div>
-			</div>
-		</div>
+			{/* Hou comment: I'd probably just move the container tags (i.e., <section>) into the sub-components themselves (like what you've done with the Dog and Retrogade components), to keep this render function clean*/}
+			<section className='weather'>
+				<Weather weather={weather} hotOrNot={hotOrNot} />
+			</section>
+			<section>
+				<Color setColor={setColor} />
+			</section>
+			<section className='advice'>
+				<Advice advice={advice} setAdvice={setAdvice} />
+			</section>
+			<Retrograde retro={retro} />
+			<Dog dog={dog} setDog={setDog} />
+			<section className='kitty'>
+				<Kitty />
+			</section>
+			<section className='poke'>
+				<Pokemon poke={poke} pokeNum={pokeNum} setPoke={setPoke} />
+			</section>
+			<LyricForm />
+			<SheWolf showError={props.showError} item={'shakira'} />
+		</main>
 	);
 }
 
