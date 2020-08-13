@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
+// Nice job using styled-components to style your buttons!
 Button = styled.button`
 	font-family: 'Montserrat', sans-serif;
 	border-radius: 15px;
@@ -13,11 +14,10 @@ Button = styled.button`
 	}
 `;
 
-function Button(props) {
+// Let's destructure our props
+function Button({type, id, onClick}) {
 	return (
-		<div>
-			<Button type={props.type} id={props.id} onClick={props.onClick}></Button>
-		</div>
+		<Button type={type} id={id} onClick={onClick}></Button>
 	);
 }
 

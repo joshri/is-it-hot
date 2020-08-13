@@ -11,12 +11,13 @@ function Dog(props) {
 	};
 
 	return (
-		<div className='dog'>
+		<section className='dog'>
 			<h2 className='dogh2'>Let this dog motivate you:</h2>
+			{/* Hou comment: it's considered an SEO best practice to include an alt attribute to describe your images */}
 			<img className='dogImg' src={props.dog} />
 			<h5>source: dog.ceo/dog-api/</h5>
 			<Button onClick={dogChange}>CHANGE IT!</Button>
-		</div>
+		</section>
 	);
 }
 

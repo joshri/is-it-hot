@@ -7,14 +7,14 @@ function Kitty(props) {
 	let url = `https://placekitten.com/${random}/200`;
 
 	return (
-		<div className='kitty'>
+		<section className='kitty'>
 			<h3 className='dogh2'>or this cat:</h3>
 			<img className='kittyImg' src={url} />
 			<h5>source: placekitten.com</h5>
 			<Button onClick={() => setRandom(Math.floor(Math.random() * 220) + 180)}>
 				CHANGE IT!
 			</Button>
-		</div>
+		</section>
 	);
 }
 

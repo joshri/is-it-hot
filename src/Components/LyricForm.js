@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Button from './Button';
 
+// Great job with implementing hooks!
 function LyricForm(props) {
 	let [artist, setArtist] = useState('D4L');
 	let [title, setTitle] = useState('Laffy Taffy');
@@ -29,7 +30,7 @@ function LyricForm(props) {
 	});
 
 	return (
-		<div className='lyricForm'>
+		<section className='lyricForm'>
 			<h2 className='lyricIntro'>
 				Read the Pulitzer Prize winning lyrics of D4L's Laffy Taffy.<br></br>Let
 				them wash over you.<br></br>Or look up the lyrics to a lesser piece.
@@ -55,11 +56,11 @@ function LyricForm(props) {
 			</form>
 			<h3>LYRICS:</h3>
 			<div className='lyrics'>
-				{lyrics.split('\n').map((x) => (
-					<p>{x}</p>
+				{lyrics.split('\n').map((lyric) => (
+					<p>{lyric}</p>
 				))}
 			</div>
-		</div>
+		</section>
 	);
 }
 
