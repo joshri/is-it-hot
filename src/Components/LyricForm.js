@@ -25,8 +25,11 @@ function LyricForm(props) {
 			.then((res) => res.json())
 			.then((json) => {
 				setLyrics(json.lyrics);
-			});
-	});
+			})
+			.catch(() => {
+				props.showError()
+			})
+	}, [url]);
 
 	return (
 		<div className='lyricForm'>
@@ -41,14 +44,14 @@ function LyricForm(props) {
 				<input
 					id='artist'
 					type='text'
-					placeholder='D4L'
+					defaultValue='D4L'
 					onChange={artistChange}
 				/>
 				<label htmlFor='title'>Title: </label>
 				<input
 					id='title'
 					type='text'
-					placeholder='Laffy Taffy'
+					defaultValue='Laffy Taffy'
 					onChange={titleChange}
 				/>
 				<Button type='submit'>CHANGE IT!</Button>

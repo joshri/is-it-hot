@@ -105,7 +105,7 @@ function Display(props) {
 					<Pokemon poke={poke} pokeNum={pokeNum} setPoke={setPoke} />
 				</div>
 				<div>
-					<LyricForm />
+					<LyricForm showError={props.showError} />
 				</div>
 				<div>
 					<SheWolf showError={props.showError} item={'shakira'} />
