@@ -3,7 +3,7 @@ import Button from './Button';
 
 function Dog(props) {
 	const dogChange = () => {
-		fetch('https://dog.ceo/api/breeds/image/random')
+		fetch('https://dog.ceo/api/breeds/image/random', {mode: 'cors'})
 			.then((res) => res.json())
 			.then((json) => {
 				props.setDog(json.message);

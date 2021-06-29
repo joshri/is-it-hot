@@ -35,7 +35,7 @@ function Display(props) {
 	});
 
 	useEffect(() => {
-		fetch(weatherUrl)
+		fetch(weatherUrl, {mode: 'cors'})
 			.then((res) => res.json())
 			.then((json) => {
 				setWeather({
@@ -46,10 +46,10 @@ function Display(props) {
 				setHotOrNot(json.main.feels_like < 60 ? 'NOT' : 'HOT');
 			})
 			.catch(() => props.showError());
-		fetch('https://api.adviceslip.com/advice')
+		fetch('https://api.adviceslip.com/advice', {mode: 'cors'})
 			.then((res) => res.json())
 			.then((json) => setAdvice(json.slip.advice));
-		fetch(`https://mercuryretrogradeapi.com?date=${date}`)
+		fetch(`https://mercuryretrogradeapi.com?date=${date}`, {mode: 'cors'})
 			.then((res) => res.json())
 			.then((json) => {
 				if (json.is_retrograde) {
@@ -59,12 +59,12 @@ function Display(props) {
 					'Unfortunately, Mercury is not in retrograde...looks like you have to go outside.'
 				);
 			});
-		fetch('https://dog.ceo/api/breeds/image/random')
+		fetch('https://dog.ceo/api/breeds/image/random', {mode: 'cors'})
 			.then((res) => res.json())
 			.then((json) => {
 				setDog(json.message);
 			});
-		fetch(`https://pokeapi.co/api/v2/pokemon/${pokeNum}`)
+		fetch(`https://pokeapi.co/api/v2/pokemon/${pokeNum}`, {mode: 'cors'})
 			.then((res) => res.json())
 			.then((json) =>
 				setPoke({ name: json.species.name, pic: json.sprites.front_default })

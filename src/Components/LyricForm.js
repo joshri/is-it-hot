@@ -5,7 +5,7 @@ function LyricForm(props) {
 	let [artist, setArtist] = useState('D4L');
 	let [title, setTitle] = useState('Laffy Taffy');
 	let [url, setUrl] = useState(`https://api.lyrics.ovh/v1/${artist}/${title}`);
-	let [lyrics, setLyrics] = useState('');
+	let [lyrics, setLyrics] = useState('Unfortunately the lyrics API appears to be down...');
 
 	const artistChange = (event) => {
 		setArtist(event.target.value);
@@ -21,14 +21,16 @@ function LyricForm(props) {
 	};
 
 	useEffect(() => {
-		fetch(url)
-			.then((res) => res.json())
-			.then((json) => {
-				setLyrics(json.lyrics);
-			})
-			.catch(() => {
-				props.showError()
-			})
+		// fetch(url, {mode: 'no-cors', headers: {
+        //         'Content-Type': 'application/json',
+        //     }})
+		// 	.then((res) => res.json())
+		// 	.then((json) => {
+		// 		setLyrics(json.lyrics);
+		// 	})
+		// 	.catch(() => {
+		// 		props.showError()
+		// 	})
 	}, [url]);
 
 	return (

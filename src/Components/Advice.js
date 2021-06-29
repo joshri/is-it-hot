@@ -3,7 +3,7 @@ import Button from './Button';
 
 function Advice(props) {
 	const adviceChange = () => {
-		fetch('https://api.adviceslip.com/advice')
+		fetch('https://api.adviceslip.com/advice', {mode: 'cors'})
 			.then((res) => res.json())
 			.then((json) => props.setAdvice(json.slip.advice));
 	};

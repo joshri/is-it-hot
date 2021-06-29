@@ -7,10 +7,9 @@ class Error extends Component {
 			<div className='error'>
 				<h1 className='error1'>HEY!</h1>
 				<h3 className='error2'>
-					You have done something horribly wrong.<br></br>I hope you know what
-					you did.
+					Something has gone horribly wrong.<br></br>Maybe you tried to change my Shakira video at the end...or even put in a fake zip... If so, you know what you did.
 				</h3>
-				<Button onClick={this.props.askAgain}>SAY SORRY</Button>
+				<Button onClick={this.props.askAgain}>TRY AGAIN</Button>
 			</div>
 		);
 	}

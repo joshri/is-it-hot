@@ -3,7 +3,7 @@ import Button from './Button';
 
 function Pokemon(props) {
 	const changePoke = () => {
-		fetch(`https://pokeapi.co/api/v2/pokemon/${props.pokeNum}`)
+		fetch(`https://pokeapi.co/api/v2/pokemon/${props.pokeNum}`, {mode: 'cors'})
 			.then((res) => res.json())
 			.then((json) =>
 				props.setPoke({
